@@ -18,7 +18,7 @@ const createBusiness = async (req, res) => {
 
 const updateBusiness = async (req, res) => {
     const {id} = req.params;
-    const {body} = req.body;
+    const body = req.body;
     try {
         const business = await Business.findByIdAndUpdate(id,
             { $set: body },
